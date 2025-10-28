@@ -83,7 +83,7 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "www.linkedin.com/in/imranbasha021",
+      href: "https://www.linkedin.com/in/imranbasha021/",
       username: "in/imranbasha"
     }
   ];

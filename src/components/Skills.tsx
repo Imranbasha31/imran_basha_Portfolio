@@ -17,7 +17,7 @@ const Skills = () => {
     },
     {
       category: "Databases",
-      skills: ["MySQL", "PostgreSQL", "MongoDB", "Redis"]
+      skills: ["MySQL", "MongoDB", "Redis"]
     },
     {
       category: "Tools & Technologies",

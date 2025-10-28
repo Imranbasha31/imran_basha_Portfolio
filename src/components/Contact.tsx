@@ -77,13 +77,13 @@ const Contact = () => {
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com",
+      href: "https://github.com/Imranbasha31/",
       username: "@imranbasha"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com",
+      href: "www.linkedin.com/in/imranbasha021",
       username: "in/imranbasha"
     }
   ];

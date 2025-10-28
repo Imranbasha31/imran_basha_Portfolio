@@ -61,7 +61,7 @@ const Hero = () => {
               <Github className="h-6 w-6" />
             </a>
             <a 
-              href="www.linkedin.com/in/imranbasha021" 
+              href="https://www.linkedin.com/in/imranbasha021/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"

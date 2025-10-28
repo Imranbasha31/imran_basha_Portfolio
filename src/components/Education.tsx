@@ -1,10 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Award } from "lucide-react";
-
 const Education = () => {
-  return (
-    <section id="education" className="py-20">
+  return <section id="education" className="py-20">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
@@ -20,11 +18,11 @@ const Education = () => {
                   <GraduationCap className="h-6 w-6 text-primary" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold mb-2">Bachelor of Technology in Computer Science</h3>
-                  <p className="text-muted-foreground mb-2">University Name</p>
-                  <p className="text-sm text-muted-foreground mb-3">2020 - 2024</p>
+                  <h3 className="text-xl font-semibold mb-2">The New College</h3>
+                  <p className="text-muted-foreground mb-2">Madras University</p>
+                  <p className="text-sm text-muted-foreground mb-3">2023 - 2026</p>
                   <div className="flex flex-wrap gap-2">
-                    <Badge variant="secondary">CGPA: 8.5/10</Badge>
+                    <Badge variant="secondary">CGPA: 7.5/10</Badge>
                     <Badge variant="secondary">First Class</Badge>
                   </div>
                 </div>
@@ -58,8 +56,6 @@ const Education = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Education;

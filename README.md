@@ -185,6 +185,34 @@ Or use a single command to clean and reinstall:
 rm -rf node_modules dist && npm install
 ```
 
+### Docker Cleanup
+
+Remove Docker containers and images:
+
+```bash
+# Stop and remove all containers for this project
+docker ps -a | grep portfolio | awk '{print $1}' | xargs docker stop
+docker ps -a | grep portfolio | awk '{print $1}' | xargs docker rm
+
+# Remove the portfolio image
+docker rmi portfolio
+
+# Or remove all stopped containers and unused images
+docker container prune -f
+docker image prune -a -f
+
+# Complete Docker cleanup (removes all unused data)
+docker system prune -a --volumes -f
+```
+
+Quick cleanup for this project:
+```bash
+# Stop container, remove container and image
+docker stop $(docker ps -q --filter ancestor=portfolio) && \
+docker rm $(docker ps -aq --filter ancestor=portfolio) && \
+docker rmi portfolio
+```
+
 ## 📝 Portfolio Sections
 
 - **Hero** - Introduction with social links (GitHub, LinkedIn, Email)

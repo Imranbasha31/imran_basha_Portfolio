@@ -161,6 +161,30 @@ import { Button } from "@/components/ui/button";
 npm run lint
 ```
 
+## 🧹 Cleanup
+
+Remove node_modules and build artifacts:
+
+```bash
+# Remove dependencies
+rm -rf node_modules
+
+# Remove build output
+rm -rf dist
+
+# Remove lock files (optional)
+rm -f package-lock.json
+rm -f bun.lockb
+
+# Reinstall fresh dependencies
+npm install
+```
+
+Or use a single command to clean and reinstall:
+```bash
+rm -rf node_modules dist && npm install
+```
+
 ## 📝 Portfolio Sections
 
 - **Hero** - Introduction with social links (GitHub, LinkedIn, Email)

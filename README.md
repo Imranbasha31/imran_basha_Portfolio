@@ -100,7 +100,7 @@ npm run preview
 
 ```bash
 # Update system packages
-sudo apt update
+sudo apt-get update
 
 # Install prerequisites
 sudo apt install docker.io -y

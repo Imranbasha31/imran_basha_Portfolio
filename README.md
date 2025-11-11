@@ -96,31 +96,6 @@ npm run preview
 
 ### Installing Docker on EC2
 
-#### Amazon Linux 2023
-
-```bash
-# Update system packages
-sudo yum update -y
-
-# Install Docker
-sudo yum install docker -y
-
-# Start Docker service
-sudo systemctl start docker
-
-# Enable Docker to start on boot
-sudo systemctl enable docker
-
-# Add ec2-user to docker group (to run docker without sudo)
-sudo usermod -a -G docker ec2-user
-
-# Log out and log back in for group changes to take effect
-# Or run: newgrp docker
-
-# Verify Docker installation
-docker --version
-```
-
 #### Ubuntu
 
 ```bash
@@ -128,26 +103,7 @@ docker --version
 sudo apt update
 
 # Install prerequisites
-sudo apt install -y ca-certificates curl gnupg lsb-release
-
-# Add Docker's official GPG key
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-
-# Set up the repository
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-# Install Docker Engine
-sudo apt update
-sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
-# Start Docker service
-sudo systemctl start docker
-
-# Enable Docker to start on boot
-sudo systemctl enable docker
+sudo apt install docker.io -y
 
 # Add ubuntu user to docker group (to run docker without sudo)
 sudo usermod -aG docker ubuntu
